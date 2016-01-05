@@ -10,6 +10,10 @@ import UIKit
 
 class PunchViewController: UIViewController {
 
+    @IBAction func startMonitorAction(sender: AnyObject) {
+        print("You press"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
