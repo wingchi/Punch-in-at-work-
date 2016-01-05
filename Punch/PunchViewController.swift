@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import CoreLocation
 
 class PunchViewController: UIViewController {
+    let manager = CLLocationManager()
 
     @IBAction func startMonitorAction(sender: AnyObject) {
-        print("You press"
+        
+        
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            manager.requestAlwaysAuthorization()
+        }
     }
     
     override func viewDidLoad() {
