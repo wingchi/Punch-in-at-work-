@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Punch View Controller-->
@@ -17,23 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gI2-7y-xLI">
-                                <rect key="frame" x="283" y="285" width="34" height="30"/>
-                                <state key="normal" title="Start"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mc3-fv-M6q">
+                                <rect key="frame" x="0.0" y="58" width="600" height="542"/>
+                            </mapView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cqC-AH-Xmu">
+                                <rect key="frame" x="276" y="20" width="51" height="31"/>
                                 <connections>
-                                    <action selector="startMonitorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nRJ-ap-TCF"/>
+                                    <action selector="monitorLocationChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rf7-rt-0X6"/>
                                 </connections>
-                            </button>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gI2-7y-xLI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="h7t-eN-k4o"/>
-                            <constraint firstItem="gI2-7y-xLI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uoi-d0-Ku8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mc3-fv-M6q" secondAttribute="trailing" constant="-20" id="SpW-A3-VVq"/>
+                            <constraint firstItem="mc3-fv-M6q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="SwP-if-1EY"/>
+                            <constraint firstItem="cqC-AH-Xmu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="agP-a1-8mc"/>
+                            <constraint firstItem="cqC-AH-Xmu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dmf-JN-FuQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mc3-fv-M6q" secondAttribute="bottom" id="fEg-hT-T3B"/>
+                            <constraint firstItem="mc3-fv-M6q" firstAttribute="top" secondItem="cqC-AH-Xmu" secondAttribute="bottom" constant="7" id="j2O-sC-sLl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="mc3-fv-M6q" id="waJ-lJ-qFk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="511" y="359"/>
         </scene>
     </scenes>
 </document>
