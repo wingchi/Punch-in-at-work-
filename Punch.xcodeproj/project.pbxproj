@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1785521C3DA68E0027A1CA /* PunchLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1785511C3DA68E0027A1CA /* PunchLog.swift */; };
+		0C1785541C3DB9CC0027A1CA /* SlackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1785531C3DB9CC0027A1CA /* SlackService.swift */; };
 		0CE1B94F1C3C6ABB00403A3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1B94E1C3C6ABB00403A3D /* AppDelegate.swift */; };
 		0CE1B9541C3C6ABB00403A3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE1B9521C3C6ABB00403A3D /* Main.storyboard */; };
 		0CE1B9561C3C6ABB00403A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE1B9551C3C6ABB00403A3D /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1785511C3DA68E0027A1CA /* PunchLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PunchLog.swift; sourceTree = "<group>"; };
+		0C1785531C3DB9CC0027A1CA /* SlackService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackService.swift; sourceTree = "<group>"; };
 		0CE1B94B1C3C6ABB00403A3D /* Punch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Punch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE1B94E1C3C6ABB00403A3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CE1B9531C3C6ABB00403A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				0CE1B94E1C3C6ABB00403A3D /* AppDelegate.swift */,
 				0CE1B9601C3C6B6C00403A3D /* PunchViewController.swift */,
+				0C1785511C3DA68E0027A1CA /* PunchLog.swift */,
+				0C1785531C3DB9CC0027A1CA /* SlackService.swift */,
 				0CE1B9521C3C6ABB00403A3D /* Main.storyboard */,
 				0CE1B9551C3C6ABB00403A3D /* Assets.xcassets */,
 				0CE1B9571C3C6ABB00403A3D /* LaunchScreen.storyboard */,
@@ -96,6 +102,11 @@
 				TargetAttributes = {
 					0CE1B94A1C3C6ABB00403A3D = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1785541C3DB9CC0027A1CA /* SlackService.swift in Sources */,
 				0CE1B9611C3C6B6C00403A3D /* PunchViewController.swift in Sources */,
+				0C1785521C3DA68E0027A1CA /* PunchLog.swift in Sources */,
 				0CE1B94F1C3C6ABB00403A3D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +299,7 @@
 				0CE1B95F1C3C6ABB00403A3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
