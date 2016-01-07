@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 class PunchViewController: UIViewController {
     let manager = CLLocationManager()
