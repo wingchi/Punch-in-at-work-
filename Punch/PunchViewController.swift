@@ -102,7 +102,7 @@ class PunchViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
     }
     
     override func viewDidLoad() {
